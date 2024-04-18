@@ -23,7 +23,7 @@ export default function ProjectList() {
       {projects.map((p, index) => (
         <div className="key"key={index}>
           <h3 className="projectName">{p.project_name}</h3>
-          <img className="image"src={`../src/public/${p.project_image}`} alt="Project" />
+          <img className="image"src={`../assets/${p.project_image}`} alt="Project" />
           <a className="url" href={p.project_url}><FaIcon.FaGithub/></a>
           <p className="desc">{p.project_description}</p>
           <p className="lang">{p.project_languages.join(", ")}</p>
