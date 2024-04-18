@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 50px 50px 50px;
+}
+
+.titleHeader a {
+  position: relative; 
+}
+
+.titleHeader a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 6px; 
+  background-color: transparent; 
+  transition: width 0.3s ease; 
+}
+
+.titleHeader a:hover::before {
+  width: 100%; 
+  background-color: orange; 
+}
+
+.link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.main_nav {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  display: flex;
+  gap: 40px;
+  justify-content: end;
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.nav__list a {
+  color: #000; 
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav__list a:hover {
+  color: orange;
+}
+
+.nav__list a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: orange; 
+  transition: width 0.3s ease; 
+}
+
+.nav__list a:hover::before {
+  width: 100%; 
+}
+
+@media screen and (max-width: 480px) {
+  .headerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link {
+    margin: 0;
+    font-size: 24px !important;
+    margin-bottom: 20px;
+  }
+
+  .main_nav {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    font-size: 28px !important;
+  }
+}
