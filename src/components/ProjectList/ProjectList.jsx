@@ -7,9 +7,12 @@ export default function ProjectList() {
 
   useEffect(() => {
     const apiRequest = async () => {
-      let response = await fetch("https://portfolio-express-three.vercel.app", {
-        method: "GET",
-      });
+      let response = await fetch(
+        "https://portfolio-express-ksau2635q-erkos-projects-bb142100.vercel.app",
+        {
+          method: "GET",
+        }
+      );
       let data = await response.json();
       console.log("Data recieved ", data);
       setProjects(data);
